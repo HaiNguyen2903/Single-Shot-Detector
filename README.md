@@ -11,22 +11,23 @@ In order to run this code, you should download the data above and put them in th
 
 data
 
+    |
     |___trainval 
   
-          |  
+            |  
           
-          |___VOC2007  
+            |___VOC2007  
           
-          |  
-          |___VOC2012
+            |  
+            |___VOC2012
     |
 
     |___test
 
-      |
+            |
       
-      |___VOC2007
-      
+            |___VOC2007
+        
 
 Since the code is to build a model from scratch, we can download this pretrained model [here](https://drive.google.com/open?id=1bvJfF6r_zYl2xZEpYXxgb7jLQHFZ01Qe).
 
