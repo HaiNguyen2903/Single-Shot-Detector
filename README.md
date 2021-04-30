@@ -8,16 +8,23 @@ First of all, **Single Shot Detector** use the **PASCAL VOC DATASET**, which is 
 - [2007 _test_](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar) (451MB)
 
 In order to run this code, you should download the data above and put them in the below order:  
-data   
-  |___trainval  
+
+data
+
+  |___trainval 
+  
           |  
+          
           |___VOC2007  
+          
           |  
           |___VOC2012
-|
+  |
 
 |___test
+
       |
+      
       |___VOC2007
       
 
