@@ -9,7 +9,6 @@ First of all, **Single Shot Detector** use the **PASCAL VOC DATASET**, which is 
 
 In order to run this code, you should download the data above and put them in the below order: 
 
-
 data
 
     |
