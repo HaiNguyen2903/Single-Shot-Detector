@@ -12,12 +12,14 @@ In order to run this code, you should download the data above and put them in th
 data
     |
     |___trainval 
+    |
     |       |  
     |       |___VOC2007  
     |       |  
     |       |___VOC2012
     |
     |___test
+    
             | 
             |___VOC2007
         
