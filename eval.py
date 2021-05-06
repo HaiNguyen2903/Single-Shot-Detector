@@ -96,4 +96,4 @@ if __name__ == '__main__':
     parser.add_argument('-cp', '--checkpoint', help='pretraied model')
 
     args = parser.parse_args()
-    evaluate(args.data_folder, args.model_checkpoint)
+    evaluate(args.dataroot, args.checkpoint)
