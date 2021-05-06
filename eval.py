@@ -7,7 +7,7 @@ from pprint import PrettyPrinter
 pp = PrettyPrinter()
 
 # Parameters
-data_folder = './'
+# data_folder = './'
 keep_difficult = True  # difficult ground truth objects must always be considered in mAP calculation, because these objects DO exist!
 batch_size = 64
 workers = 4
@@ -15,22 +15,16 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 checkpoint = './checkpoint_ssd300.pth.tar'
 
 # Load model checkpoint that is to be evaluated
-checkpoint = torch.load(checkpoint, map_location=torch.device('cpu'))
-model = checkpoint['model']
-model = model.to(device)
+
+# checkpoint = torch.load(checkpoint, map_location=torch.device('cpu'))
+# model = checkpoint['model']
+# model = model.to(device)
 
 # Switch to eval mode
 model.eval()
 
-# Load test data
-test_dataset = PascalVOCDataset(data_folder,
-                                split='test',
-                                keep_difficult=keep_difficult)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
-                                          collate_fn=test_dataset.collate_fn, num_workers=workers, pin_memory=True)
 
-
-def evaluate(test_loader, model):
+def evaluate(data_folder, model_checkpoint):
     """
     Evaluate.
 
@@ -38,8 +32,22 @@ def evaluate(test_loader, model):
     :param model: model
     """
 
+    if torch.cuda.is_available() == True:
+        checkpoint = torch.load(model_checkpoint, map_location=torch.device('cpu'))
+    else:
+        checkpoint = torch.load(model_checkpoint)
+    model = checkpoint['model']
+    model = model.to(device)
+
     # Make sure it's in eval mode
     model.eval()
+
+    # Load test data
+    test_dataset = PascalVOCDataset(data_folder,
+                                    split='test',
+                                    keep_difficult=keep_difficult)
+    test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
+                                            collate_fn=test_dataset.collate_fn, num_workers=workers, pin_memory=True)
 
     # Lists to store detected and true boxes, labels, scores
     det_boxes = list()
@@ -84,4 +92,9 @@ def evaluate(test_loader, model):
     print('\nMean Average Precision (mAP): %.3f' % mAP)
 
 if __name__ == '__main__':
-    evaluate(test_loader, model)
+    parser = argparse.ArgumentParser(description = 'evaluate arguments')
+    parser.add_argument('-dr', '--dataroot', help='data for testing')
+    parser.add_argument('-cp', '--checkpoint', help='pretraied model')
+
+    args = parser.parse_args()
+    evaluate(arg.data_folder, arg.model_checkpoint)
