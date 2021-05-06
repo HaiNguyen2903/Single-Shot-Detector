@@ -56,6 +56,7 @@ def create_data_lists(voc07test_path, voc07trainval_path, voc12trainval_path, ou
     :param voc12_path: path to the 'VOC2012' folder
     :param output_folder: folder where the JSONs must be saved
     """
+    print('Initializing data path . . .')
     voc07test_path = os.path.abspath(voc07test_path)
     voc07trainval_path = os.path.abspath(voc07trainval_path)
     voc12trainval_path = os.path.abspath(voc12trainval_path)
@@ -64,6 +65,7 @@ def create_data_lists(voc07test_path, voc07trainval_path, voc12trainval_path, ou
     train_objects = list()
     n_objects = 0
 
+    print('Reading train data . . .')
     # Training data
     for path in [voc07trainval_path, voc12trainval_path]:
 
@@ -82,6 +84,7 @@ def create_data_lists(voc07test_path, voc07trainval_path, voc12trainval_path, ou
 
     assert len(train_objects) == len(train_images)
 
+    print('Creating training json data . . .')
     # Save to file
     with open(os.path.join(output_folder, 'TRAIN_images.json'), 'w') as j:
         json.dump(train_images, j)
@@ -98,6 +101,7 @@ def create_data_lists(voc07test_path, voc07trainval_path, voc12trainval_path, ou
     test_objects = list()
     n_objects = 0
 
+    print('Reading test data . . .')
     # Find IDs of images in the test data
     with open(os.path.join(voc07test_path, 'ImageSets/Main/test.txt')) as f:
         ids = f.read().splitlines()
@@ -113,6 +117,7 @@ def create_data_lists(voc07test_path, voc07trainval_path, voc12trainval_path, ou
 
     assert len(test_objects) == len(test_images)
 
+    print('Creating test json data . . .')
     # Save to file
     with open(os.path.join(output_folder, 'TEST_images.json'), 'w') as j:
         json.dump(test_images, j)
