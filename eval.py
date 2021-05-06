@@ -21,8 +21,6 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # model = model.to(device)
 
 # Switch to eval mode
-model.eval()
-
 
 def evaluate(data_folder, model_checkpoint):
     """
