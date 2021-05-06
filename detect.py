@@ -100,13 +100,13 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     return annotated_image
 
 
-parser = argparse.ArgumentParser(description = 'detecting arguments')
-parser.add_argument('-i', '--image', help='image need to detect')
-parser.add_argument('-ms', '--meanscore', help='mean score')
-parser.add_argument('-mo', '--maxoverlap', help='max overlap')
-parser.add_argument('-t', '--topk', help='top k')
-
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description = 'detecting arguments')
+    parser.add_argument('-i', '--image', help='image need to detect')
+    parser.add_argument('-ms', '--meanscore', help='mean score')
+    parser.add_argument('-mo', '--maxoverlap', help='max overlap')
+    parser.add_argument('-t', '--topk', help='top k')
+
     # img_path = './data/test/VOC2007/JPEGImages/000001.jpg'
     # original_image = Image.open(img_path, mode='r')
     # original_image = original_image.convert('RGB')
