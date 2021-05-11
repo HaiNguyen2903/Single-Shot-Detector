@@ -2,7 +2,7 @@ from torchvision import transforms
 from utils import *
 from PIL import Image, ImageDraw, ImageFont
 import argparse
-
+import cv2
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model checkpoint
@@ -69,7 +69,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     # Annotate
     annotated_image = original_image
     draw = ImageDraw.Draw(annotated_image)
-    font = ImageFont.truetype("./calibril.ttf", 15)
+    font = ImageFont.truetype("font/arial.ttf", 15)
 
     # Suppress specific classes, if needed
     for i in range(det_boxes.size(0)):
@@ -101,17 +101,18 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description = 'detecting arguments')
-    parser.add_argument('-i', '--image', help='image need to detect')
-    parser.add_argument('-ms', '--meanscore', help='mean score')
-    parser.add_argument('-mo', '--maxoverlap', help='max overlap')
-    parser.add_argument('-t', '--topk', help='top k')
+    # parser = argparse.ArgumentParser(description = 'detecting arguments')
+    # parser.add_argument('-i', '--image', help='image need to detect')
+    # parser.add_argument('-ms', '--meanscore', help='mean score')
+    # parser.add_argument('-mo', '--maxoverlap', help='max overlap')
+    # parser.add_argument('-t', '--topk', help='top k')
 
-    # img_path = './data/test/VOC2007/JPEGImages/000001.jpg'
-    # original_image = Image.open(img_path, mode='r')
-    # original_image = original_image.convert('RGB')
-    # detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200).show()
 
-    args = parser.parse_args()
+    # args = parser.parse_args()
 
-    detect(args.original_image, args.min_score, args.max_overlap, args.top_k)
+    # detect(args.original_image, args.min_score, args.max_overlap, args.top_k)
+
+    img_path = './images/test_img.jpg'
+    original_image = Image.open(img_path, mode='r')
+    original_image = original_image.convert('RGB')
+    detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200).show()
