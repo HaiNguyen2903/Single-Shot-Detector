@@ -60,6 +60,9 @@ Run the **eval.py** file to evaluate the pretrained model.
 |  Mobilenet V2     |     320    |  70.5   |   21.9 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_efficientnet_b3.pt)  |
 |  EfficientNet-B3  |     300    |  78.3   |   47.7 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_mobilenetv2.pt)  |
 
+[assets_5]: https://github.com/ultralytics/yolov5/releases
+[assets_3]: https://github.com/ultralytics/yolov3/releases
+[assets_ssd]: https://github.com/amdegroot/ssd.pytorch
 
 Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<sup>test<br>0.5:0.95 |mAP<sup>test<br>0.5 |Speed<br><sup>V100 (ms) | |params<br><sup>(M) 
 ---   |---                   |---                     |---                |---                      |---                |---                     |---|---              
@@ -71,4 +74,4 @@ Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<s
 [YOLOv3 fastest][assets_3]   |640  | -       | -       | -       | -       | -       | | | - 
 [YOLOv3-tiny][assets_3]      |640  |**55.7** |**87.9** |**55.6** |**87.8** |**3.4**  | |8.8  
 [YOLOv3-SSP][assets_3]       |640  | -       | -       | -       | -       | -       | |63.0
-[SSD300][assets_3]           |300  |**54.5** |**85.1** |**52.6** |**86.8** |**3.2**  | |6.8  
+[SSD300][assets_ssd]           |300  |**54.5** |**85.1** |**52.6** |**86.8** |**3.2**  | |6.8  
