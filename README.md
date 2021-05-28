@@ -84,5 +84,11 @@ Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<s
     
 The result of SSD300 model is not too good compared to other newest version of **YOLO** family, but it is still acceptable (especially with a model created from 2016). 
     
-
+![](images/000001.jpg) 
+![](images/000005.jpg) 
+![](iamges/000009.jpg) 
+![](images/000011.jpg)
+![](images/000014.jpg)
+    
+![](images/demo1.jpg) 
  
