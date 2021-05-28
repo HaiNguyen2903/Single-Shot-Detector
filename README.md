@@ -1,10 +1,17 @@
 # Single Shot Detector Overview
-In this project, we re-implemented a basic approach to Single Shot Detector and Object Production Problem. This repo includes some fundamental files that we need to concern: 
+In this project, we re-implemented a basic approach to Single Shot Detector and Object Production Problem. Single Shot Detector discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. Additionally, the network combines predictions from multiple feature maps with different resolutions to naturally handle objects of various sizes.
+
+This repo re-built the SSD300 model from the scratch, which includes some fundamental files that we need to concern: 
 - **train.py** for training SSD model from scractch
 - **eval.py** for evaluating pretrained SSD model from a saved checkpoint.
 - **detect.py** for object detection demo. 
+- other support and setup files for building and implementing m
 
-Due to lack of time, as well as limited in hardware requirement, we simple re-used the pretrained SSD model, which performs quite well in the end. 
+# Dependencies
+* Python 3
+* PyTorch 1.6.0
+* OpenCV 4.3.0
+* albumentations 0.4.6
 
 # About the Dataset
 **Single Shot Detector** use the **PASCAL VOC DATASET**, which is spliited into the following sub-datasets:
@@ -49,6 +56,6 @@ Run the **eval.py** file to evaluate the pretrained model.
 | Backbone          | Input Size |   mAP   | Model Size | Download  |
 | :---------------: | :---------:| :-----: | :--------: | :-------: |
 |  VGG16 by lufficc |     300    |  77.7   |   101 MB   | [model](https://github.com/lufficc/SSD/releases/download/1.2/vgg_ssd300_voc0712.pth)  |
-|  VGG16 2nd attempt|     300    |  77.2   |   101 MB   |           |
+|  VGG16 by me      |     300    |  77.2   |   101 MB   |           |
 |  Mobilenet V2     |     320    |  70.5   |   21.9 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_efficientnet_b3.pt)  |
 |  EfficientNet-B3  |     300    |  78.3   |   47.7 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_mobilenetv2.pt)  |
