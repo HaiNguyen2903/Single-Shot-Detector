@@ -86,6 +86,7 @@ The result of SSD300 model is not too good compared to other newest version of *
 
 # DEMO
 Some outputs from VOC2017 test dataset:
+    
 ![](images/000001.jpg) <br>
 ![](images/000005.jpg) <br>
 ![](iamges/000009.jpg) <br>
@@ -93,6 +94,7 @@ Some outputs from VOC2017 test dataset:
 ![](images/000014.jpg) <br>
     
 Some output from our deployment work:
+    
 ![](images/demo1.png) <br>
 ![](images/demo2.png) <br>
 ![](images/demo3.png) <br>
