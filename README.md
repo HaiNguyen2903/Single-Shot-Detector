@@ -84,8 +84,8 @@ Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<s
     
 The result of SSD300 model is not too good compared to other newest version of **YOLO** family, but it is still acceptable (especially with a model created from 2016). 
 
-# DEMO
-Some outputs from VOC2017 test dataset:
+# Demo Outputs
+**Some outputs from VOC2017 test dataset:**
     
 ![](images/000001.jpg) <br>
 ![](images/000005.jpg) <br>
@@ -93,10 +93,13 @@ Some outputs from VOC2017 test dataset:
 ![](images/000011.jpg) <br>
 ![](images/000014.jpg) <br>
     
-Some output from our deployment work:
+    
+    
+**Some output from our deployment work:**
     
 ![](images/demo1.png) <br>
 ![](images/demo2.png) <br>
 ![](images/demo3.png) <br>
 ![](images/demo4.png) <br>
  
+Our visit our full deployment here(https://www.youtube.com/watch?v=YdGf6xMGzVQ).
