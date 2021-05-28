@@ -83,12 +83,18 @@ Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<s
 [SSD300][assets_ssd]           |300  |**54.5** |**85.1** |**52.6** |**86.8** |**3.2**  | | - 
     
 The result of SSD300 model is not too good compared to other newest version of **YOLO** family, but it is still acceptable (especially with a model created from 2016). 
+
+# DEMO
+Some outputs from VOC2017 test dataset:
+![](images/000001.jpg) <br>
+![](images/000005.jpg) <br>
+![](iamges/000009.jpg) <br>
+![](images/000011.jpg) <br>
+![](images/000014.jpg) <br>
     
-![](images/000001.jpg) 
-![](images/000005.jpg) 
-![](iamges/000009.jpg) 
-![](images/000011.jpg)
-![](images/000014.jpg)
-    
-![](images/demo1.jpg) 
+Some output from our deployment work:
+![](images/demo1.png) <br>
+![](images/demo2.png) <br>
+![](images/demo3.png) <br>
+![](images/demo4.png) <br>
  
