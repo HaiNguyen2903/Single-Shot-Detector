@@ -59,3 +59,16 @@ Run the **eval.py** file to evaluate the pretrained model.
 |  VGG16 by me      |     300    |  77.2   |   101 MB   |           |
 |  Mobilenet V2     |     320    |  70.5   |   21.9 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_efficientnet_b3.pt)  |
 |  EfficientNet-B3  |     300    |  78.3   |   47.7 MB  | [model](https://github.com/ncthuan/single-shot-detection-pytorch/releases/download/0.0/ssd_mobilenetv2.pt)  |
+
+
+Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<sup>test<br>0.5:0.95 |mAP<sup>test<br>0.5 |Speed<br><sup>V100 (ms) | |params<br><sup>(M) 
+---   |---                   |---                     |---                |---                      |---                |---                     |---|---              
+[YOLOv5s][assets_5]    |640  |  65.4   |  93.1   |  65.4   |93.2     |**6.3**| |7.3   
+[YOLOv5m][assets_5]    |640  |  66.5   |  93.9   |  66.7   |93.7     |7.9    | |21.4  
+[YOLOv5l][assets_5]    |640  |**65.8** |**93.9** | 66.9   | 93.8     |12.1   | |47.0  
+[YOLOv5x][assets_5]    |640  |  66.5   |  93.5   | **67.3**|**94.0** |  20.7  | |87.7  
+| | | | | | || |
+[YOLOv3 fastest][assets_3]   |640  | -       | -       | -       | -       | -       | | | - 
+[YOLOv3-tiny][assets_3]      |640  |**55.7** |**87.9** |**55.6** |**87.8** |**3.4**  | |8.8  
+[YOLOv3-SSP][assets_3]       |640  | -       | -       | -       | -       | -       | |63.0
+[YOLOv3][assets_3]           |640  | -       | -       | -       | -       | -       | |61.9
