@@ -102,4 +102,4 @@ The result of SSD300 model is not too good compared to other newest version of *
 ![](images/demo3.png) <br>
 ![](images/demo4.png) <br>
  
-Our visit our full deployment here(https://www.youtube.com/watch?v=YdGf6xMGzVQ).
+Our visit our full deployment [here](https://www.youtube.com/watch?v=YdGf6xMGzVQ).
