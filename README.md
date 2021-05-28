@@ -84,4 +84,16 @@ Model |size<br><sup>(pixels) |mAP<sup>val<br>0.5:0.95 |mAP<sup>val<br>0.5 |mAP<s
     
 The result of SSD300 model is not too good compared to other newest version of **YOLO** family, but it is still acceptable (especially with a model created from 2016). 
     
+# DEMO
+Some sample outputs from VOC2017 test dataset:
+    
+![](results/ssdeff_sample_detection/000001.jpg) ![](results/ssdeff_sample_detection/000010.jpg)
+![](results/ssdeff_sample_detection/000004.jpg) 
+![](results/ssdeff_sample_detection/000014.jpg) 
+![](results/ssdeff_sample_detection/000019.jpg)
+![](results/ssdeff_sample_detection/000084.jpg)<br>
+![](results/ssdeff_sample_detection/000073.jpg) ![](results/ssdeff_sample_detection/000075.jpg)
 In the end, we tried to build an end to end project of SSD300 and sucessful deploy it to a reality application. So hope you enjoy our works and achievements :D
+    
+Our deployment output:
+ 
